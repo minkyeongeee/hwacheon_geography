@@ -1,103 +1,210 @@
 <!DOCTYPE html>
 
-<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>장소의 가치로 읽는 우리 지역 핫 플레이스 | 지리 탐구 활동지</title>
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<title>장소의 가치로 읽는 우리 지역 핫 플레이스 | 지리 탐구 활동지</title>
 <style>
-:root{--ink:#182b40;--muted:#627387;--teal:#087e83;--mint:#e9f7f5;--bg:#f4f7fb;--line:#dbe5eb;--gold:#fff4dc}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif;color:var(--ink);line-height:1.65}button,input,textarea,select{font:inherit}button{cursor:pointer}a{color:#087e83}.hero{background:linear-gradient(120deg,#103c56,#087d7e);color:#fff;padding:48px max(22px,calc((100vw - 1040px)/2)) 42px}.eyebrow{font-size:13px;letter-spacing:2px;font-weight:800;opacity:.8}.hero h1{font-size:clamp(28px,4vw,45px);line-height:1.25;margin:12px 0}.hero p{max-width:730px;color:#e4f6f4;margin:0}.shell{max-width:1040px;margin:0 auto;padding:26px 18px 110px}.toolbar{position:sticky;top:0;z-index:5;background:rgba(244,247,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.toolbar-inner{max-width:1040px;margin:auto;padding:10px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}.spacer{flex:1}.btn{border:1px solid #cadce1;background:#fff;color:var(--ink);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:800}.btn.primary{background:#087e83;color:#fff;border-color:#087e83}.btn:hover{filter:brightness(.96)}.status{font-size:12px;color:var(--muted)}.panel{background:#fff;border:1px solid var(--line);border-radius:19px;padding:26px;margin-bottom:22px;box-shadow:0 7px 28px rgba(17,52,71,.035)}.panel h2{font-size:23px;margin:0 0 6px}.panel h3{font-size:16px;margin:22px 0 10px}.sub{color:var(--muted);margin:0 0 18px;font-size:14px}.step{display:inline-block;background:var(--mint);color:#087e83;padding:4px 11px;border-radius:20px;font-size:12px;font-weight:900;margin-bottom:9px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{margin:16px 0}.field label{display:block;font-weight:800;font-size:14px;margin-bottom:7px}.hint{display:block;font-size:12px;color:var(--muted);font-weight:400;margin:3px 0 7px}input[type=text],input[type=date],input[type=url],textarea,select{width:100%;border:1px solid #cbd8e0;border-radius:10px;padding:12px 13px;background:#fcfeff;color:var(--ink);outline:none}textarea{min-height:115px;resize:vertical}input:focus,textarea:focus{border-color:#087e83;box-shadow:0 0 0 3px #087e8320}.callout{background:#eff8f7;border-left:4px solid var(--teal);padding:15px 18px;border-radius:10px;font-size:13px;margin:16px 0}.warm{background:#fff9ec;border-left-color:#e0a432}.sources{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.sources a{display:inline-flex;padding:8px 12px;border:1px solid #bbdcda;border-radius:9px;background:#fff;text-decoration:none;font-size:13px;font-weight:700}.question{border-top:1px solid #e7edf1;padding-top:17px;margin-top:20px}.qtitle{font-weight:900;font-size:16px}.num{display:inline-grid;place-items:center;width:26px;height:26px;background:#e4f5f2;color:#087e83;border-radius:8px;margin-right:7px;font-size:13px}.refcard{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:15px;margin:12px 0}.refhead{display:flex;justify-content:space-between;align-items:center;gap:10px}.refhead strong{font-size:13px}.small{font-size:12px;color:var(--muted)}.progress{height:8px;background:#dce9ed;border-radius:20px;overflow:hidden;width:130px}.progress>div{height:100%;background:#10a09b;width:0;transition:width .2s}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:26px}.pill{font-size:12px;color:#0a7779;background:#e9f7f5;border-radius:50px;padding:3px 9px}.section-nav{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 20px}.section-nav a{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;text-decoration:none;font-size:13px;font-weight:800}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.check{display:flex;align-items:flex-start;gap:9px;margin:8px 0;font-size:13px}.check input{margin-top:6px;accent-color:#087e83}.print-only{display:none}@media(max-width:640px){.panel{padding:19px}.grid,.two-col{grid-template-columns:1fr}.hero{padding:36px 20px}.toolbar-inner{gap:5px}.btn{padding:8px 10px}.progress{width:65px}}@media print{*{print-color-adjust:exact;-webkit-print-color-adjust:exact}body{background:white;font-size:11pt}.hero{padding:20px 28px}.hero h1{font-size:25pt}.toolbar,.section-nav,.no-print{display:none!important}.shell{padding:12px}.panel{box-shadow:none;break-inside:auto;padding:18px;border-radius:10px;margin:12px 0}.question,.field,.refcard{break-inside:avoid}textarea{height:auto!important;min-height:60px;overflow:visible;white-space:pre-wrap}input,textarea{border:1px solid #cbd8e0!important;background:white!important}.print-only{display:block}.footer{margin:10px}}
-
-/* 단계별 화면 */
-.section-nav{position:sticky;top:57px;z-index:4;background:var(--bg);padding:12px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
-.section-nav button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 5px;color:var(--ink);font-weight:800;font-size:12px;cursor:pointer}
-.section-nav button.active{background:var(--teal);border-color:var(--teal);color:#fff}
-.wizard-panel[hidden]{display:none!important}
-.wizard-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 24px}
-.wizard-controls .btn{min-width:115px}.wizard-counter{font-size:13px;color:var(--muted);text-align:center}
-@media(max-width:640px){.section-nav{top:95px;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.section-nav button{font-size:10px;padding:9px 2px}.wizard-controls .btn{min-width:90px}}
-@media print{.wizard-panel[hidden]{display:block!important}.wizard-controls{display:none!important}}
-
-.answer-sub{display:block;font-size:13px;font-weight:800;margin:14px 0 6px}.answer-sub+textarea{display:block}
-@media print{.print-answer{white-space:pre-wrap;overflow-wrap:anywhere;min-height:38px;padding:10px 12px;border:1px solid #cbd8e0;border-radius:8px;font-size:12px;line-height:1.6}.print-replaced{display:none!important}.hero{break-after:avoid}.panel{break-inside:auto}}
-
-/* 9차 수정: 스마트폰·태블릿·PC 반응형 최적화 */
-html{scroll-padding-top:24px;-webkit-text-size-adjust:100%}
-body{overflow-x:hidden;overflow-wrap:anywhere}
-button,input,textarea,select{max-width:100%;font-size:16px}
-button{touch-action:manipulation}
-.btn,.section-nav button{min-height:44px}
-:focus-visible{outline:3px solid #087e83;outline-offset:3px}
-textarea{line-height:1.65;min-height:140px}
-.toolbar{position:relative;top:auto}
-.toolbar-inner{gap:9px}
-.toolbar-inner .spacer{flex:1 1 auto}
-.section-nav{top:0;position:sticky;z-index:8}
-.wizard-panel{scroll-margin-top:80px}
-@media(min-width:641px) and (max-width:1024px){
- .shell{padding:22px 24px 90px}
- .hero{padding:38px 28px}
- .panel{padding:23px}
- .toolbar-inner{padding:12px 24px}
- .section-nav button{font-size:13px;padding:12px 5px}
+/* ═══ 수업자료 공통 스타일 v2 (food-place-activity와 동일 계열) ═══ */
+:root{
+  --ink:#111517; --mid:#525C60; --soft:#8A9296;
+  --line:#E2E5E2; --line2:#EFF1EE; --wash:#F5F7F5;
+  --acc:#2B3338; --on-acc:#ffffff; --red:#A03A26; --paper:#ffffff;
+  --f:Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
+  --w:980px;
+  --place:#3D5A6C; --place-w:#EEF2F5; --place-l:#CBD6DE;
+  --food:#9A7128;  --food-w:#F7F2E6;  --food-l:#E6D9B8;
+  --teal:var(--acc); --muted:var(--soft);
 }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#E9ECEA; --mid:#A8AFAC; --soft:#7D8582;
+    --line:#2E3432; --line2:#252A28; --wash:#1C2120;
+    --acc:#D3D8DA; --on-acc:#121615; --red:#D9917E; --paper:#121615;
+    --place:#9DB6C6; --place-w:#1C2328; --place-l:#33414B;
+    --food:#D4B06A; --food-w:#29241A; --food-l:#4A3F28;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;letter-spacing:-.005em;overflow-x:hidden;overflow-wrap:anywhere}
+input,textarea,button,select{font-family:inherit;color:inherit;outline:none;max-width:100%}
+button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+a{color:var(--place)}
+[hidden]{display:none!important}
+
+/* 머리줄 + 단계 탭 */
+header.top{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line)}
+.hin{max-width:var(--w);margin:0 auto;padding:8px 30px 10px}
+.brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--soft);margin-bottom:6px;min-height:22px}
+.brand .sp{flex:1}
+.tools{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.status{font-size:12px;color:var(--soft)}
+.progress{width:64px;height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.progress>div{height:100%;background:var(--acc);width:0;transition:width .2s}
+.link{border:none;background:none;font-size:12px;color:var(--mid);padding:2px 4px;
+  text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.link:hover{color:var(--ink)}
+.seg{display:flex;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--paper)}
+.seg button{flex:1;border:none;border-right:1px solid var(--line);background:none;
+  padding:9px 6px;font-size:14.5px;color:var(--mid);white-space:nowrap}
+.seg button:last-child{border-right:none}
+.seg button:hover:not(.active){background:var(--wash)}
+.seg button.active{background:var(--acc);color:var(--on-acc);font-weight:600}
+.seg button.done::after{content:" ✓";color:var(--place);font-weight:600}
+.seg button.active.done::after{color:var(--on-acc)}
+
+/* 본문 */
+.shell{max-width:var(--w);margin:0 auto;padding:30px 30px 70px}
+.mast{border-bottom:2px solid var(--acc);padding-bottom:16px;margin-bottom:24px}
+.mast h1{font-size:30px;font-weight:700;color:var(--acc);line-height:1.35;letter-spacing:-.01em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.wizard-panel:not([hidden]){animation:fadeUp .4s cubic-bezier(.16,1,.3,1)}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin-bottom:5px}
+.sec-n{font-size:13px;font-weight:600;color:var(--acc);white-space:nowrap}
+.sec-t{font-size:19px;font-weight:600;color:var(--ink);line-height:1.5}
+.sub{font-size:15px;color:var(--mid);margin-bottom:16px;line-height:1.8}
+
+/* 입력 */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.infobox{border:1px solid var(--line);border-radius:3px;padding:6px 18px 12px}
+.field{margin:10px 0}
+.field label{display:block;font-size:13px;color:var(--soft);margin-bottom:5px;letter-spacing:.03em}
+input[type=text],input[type=date],input[type=url],input:not([type]),select{width:100%;background:var(--paper);
+  border:1px solid var(--line);border-radius:3px;font-size:15px;padding:8px 10px;min-height:42px}
+select{-webkit-appearance:none;appearance:none;padding-right:30px;
+  background-image:linear-gradient(45deg,transparent 50%,var(--soft) 50%),linear-gradient(135deg,var(--soft) 50%,transparent 50%);
+  background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+textarea{display:block;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:3px;
+  padding:10px 11px;font-size:15px;line-height:1.75;resize:vertical;min-height:120px;margin-top:4px}
+input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+::placeholder{color:var(--soft);opacity:.85}
+
+.question{border-top:1px solid var(--line2);padding-top:18px;margin-top:20px}
+.qtitle{display:flex;align-items:baseline;gap:7px;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.num{font-size:12px;font-weight:700;color:var(--soft)}
+.hint{display:block;font-size:14px;color:var(--mid);line-height:1.85;margin-bottom:9px;
+  padding-left:9px;border-left:2px solid var(--line)}
+.answer-sub{display:block;font-size:13px;color:var(--soft);margin:14px 0 4px;letter-spacing:.03em}
+
+/* 안내 상자 */
+.callout{background:var(--wash);border:1px solid var(--line);border-radius:3px;padding:13px 15px;
+  font-size:13.5px;color:var(--mid);line-height:1.9;margin:16px 0}
+.callout b,.callout strong{color:var(--acc);font-weight:600}
+.callout.place{background:var(--place-w);border-color:var(--place-l)}
+.callout.place b{color:var(--place)}
+.callout.warm{background:var(--food-w);border-color:var(--food-l)}
+.callout.warm b,.callout.warm strong{color:var(--food)}
+.callout ul{margin:6px 0 8px 18px}.callout li{margin:2px 0}.callout p{margin:6px 0}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;padding:2px 10px;border-radius:2px;
+  color:#fff;background:var(--acc);margin-right:6px;white-space:nowrap}
+.tag.place{background:var(--place)}.tag.food{background:var(--food)}
+.small{font-size:12.5px;color:var(--soft)}
+.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.sources a{display:inline-flex;align-items:center;min-height:38px;padding:6px 13px;border:1px solid var(--line);
+  border-radius:3px;background:var(--paper);text-decoration:none;font-size:14px;color:var(--ink)}
+.sources a:hover{border-color:var(--acc)}
+.panel h3{font-size:16px;font-weight:600;margin:30px 0 2px;padding-top:18px;border-top:1px solid var(--line2)}
+.refcard{border:1px solid var(--place-l);background:var(--place-w);border-radius:4px;padding:14px 16px 6px;margin:10px 0}
+.refhead strong{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;padding:2px 10px;
+  border-radius:2px;color:#fff;background:var(--place)}
+.refcard .field{margin:8px 0}
+
+/* 버튼 · 단계 이동 */
+.btn{border:1px solid var(--line);background:var(--paper);color:var(--mid);border-radius:4px;
+  padding:9px 19px;font-size:15px;min-height:42px}
+.btn:hover{background:var(--wash)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:var(--on-acc);font-weight:600}
+.btn.primary:hover{filter:brightness(.92)}
+.btn:disabled{opacity:.4;cursor:default}
+.wizard-controls{display:flex;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:26px;padding-top:16px;border-top:1px solid var(--line2)}
+.wizard-counter{font-size:13px;color:var(--soft)}
+.savebox{border:1px solid var(--line);border-radius:3px;padding:16px 18px;margin-top:18px}
+.savebox .sources{margin-top:0}
+.savebox .btn{flex:1 1 150px}
+.footer{text-align:center;color:var(--soft);font-size:12px;margin-top:34px}
+.print-only{display:none}
+
 @media(max-width:640px){
- .hero{padding:26px 18px 28px}
- .hero h1{font-size:clamp(25px,7vw,34px);line-height:1.35}
- .hero p{font-size:14px}
- .shell{padding:12px 12px calc(105px + env(safe-area-inset-bottom))}
- .panel{padding:18px 15px;border-radius:14px;margin-bottom:14px}
- .panel h2{font-size:21px;line-height:1.4}
- .panel h3{font-size:17px}
- .toolbar-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:10px 12px;gap:7px}
- .toolbar-inner .spacer{display:none}
- .toolbar-inner .status:first-child{grid-column:1 / -1}
- .toolbar-inner .progress{width:100%;grid-column:1}
- .toolbar-inner #progressText{grid-column:2;text-align:right}
- .toolbar-inner .btn{font-size:13px;padding:9px 6px;min-width:0;width:100%;white-space:normal}
- .toolbar-inner #imageBtn{grid-column:1 / -1}
- .section-nav{top:0;display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;gap:7px;padding:10px 1px;margin-bottom:12px;scrollbar-width:thin}
- .section-nav button{flex:0 0 auto;min-width:95px;max-width:155px;font-size:12px;padding:9px 12px;scroll-snap-align:start;white-space:nowrap}
- .grid,.two-col{grid-template-columns:minmax(0,1fr)}
- .field{margin:12px 0}
- input[type=text],input[type=date],input[type=url],textarea,select{padding:12px;min-height:46px;font-size:16px}
- textarea{min-height:155px}
- .question{margin-top:16px;padding-top:15px}
- .qtitle{font-size:15px}
- .sources a{min-height:44px;align-items:center}
- .refcard{padding:12px}
- .wizard-controls{position:sticky;bottom:0;z-index:7;margin:0 -12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(244,247,251,.98);border-top:1px solid var(--line);box-shadow:0 -5px 18px #17374a12}
- .wizard-controls .btn{min-width:0;flex:1;padding:10px 8px}
- .wizard-counter{flex:0 0 60px;font-size:12px}
+  .hin,.shell{padding-left:16px;padding-right:16px}
+  .shell{padding-top:24px;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .seg{flex-wrap:wrap}
+  .seg button{flex:1 0 33.3%;font-size:13px;padding:8px 2px;border-bottom:1px solid var(--line)}
+  .mast h1{font-size:23px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  textarea{min-height:150px}
+  .wizard-controls{position:fixed;left:0;right:0;bottom:0;z-index:20;margin:0;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line)}
+  .wizard-controls .btn{flex:1;padding:9px 8px}
+  .wizard-counter{flex:0 0 52px;text-align:center}
 }
-@media(max-width:370px){.toolbar-inner .btn{font-size:12px}.section-nav button{min-width:87px}}
+
+/* 인쇄 */
 @media print{
- .toolbar,.section-nav,.wizard-controls{display:none!important}
- .shell{padding:12px!important}
- .panel{padding:18px!important}
- .grid,.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}
- .hero{padding:20px 28px!important}
- .hero h1{font-size:25pt!important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  :root{--ink:#111517;--mid:#525C60;--soft:#8A9296;--line:#E2E5E2;--line2:#EFF1EE;--wash:#F5F7F5;--acc:#2B3338;--paper:#fff;
+    --place:#3D5A6C;--place-w:#EEF2F5;--place-l:#CBD6DE;--food:#9A7128;--food-w:#F7F2E6;--food-l:#E6D9B8}
+  body{background:#fff;font-size:11pt}
+  header.top,.wizard-controls,.no-print,.ws-modal,.inapp-banner{display:none!important}
+  .wizard-panel[hidden]{display:block!important}
+  .shell{padding:0;max-width:none}
+  .wizard-panel{margin-bottom:10mm}
+  .question,.field,.refcard{break-inside:avoid}
+  .print-only{display:block}
+  .print-replaced{display:none!important}
+  .print-answer{white-space:pre-wrap;overflow-wrap:anywhere;min-height:34px;padding:8px 10px;
+    border:1px solid var(--line);border-radius:3px;font-size:10.5pt;line-height:1.7}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-.callout ul{margin:9px 0 12px;padding-left:22px}.callout li{margin:5px 0}.callout p{margin:10px 0}.callout strong{font-weight:800}</style></head><body>
-<header class="hero"><div class="eyebrow">GEOGRAPHY PROJECT · 한국지리 탐구 수행평가</div><h1>장소의 가치로 읽는<br/>우리 지역 핫 플레이스</h1></header>
-<div class="toolbar"><div class="toolbar-inner"><span aria-live="polite" class="status" id="saveStatus">저장 준비 완료</span><div class="spacer"></div><div class="progress" title="작성 진행률"><div id="progressFill"></div></div><span class="status" id="progressText">0%</span><button class="btn" id="saveBtn">임시 저장</button><button class="btn" id="loadBtn">저장 파일 불러오기</button><button class="btn primary" id="exportBtn">결과물 저장</button><button class="btn" id="shareBtn" type="button">파일 공유·저장 (카카오톡용)</button><button class="btn" id="printBtn">PDF 저장 / 인쇄</button><button class="btn" id="imageBtn" type="button">이미지(PNG) 저장</button></div></div>
-<main class="shell"><nav aria-label="활동 단계 이동 (좌우로 스크롤 가능)" class="section-nav"><button data-go="0" type="button">시작</button><button data-go="1" type="button">자료 조사와 분석</button><button data-go="2" type="button">장소 선정</button><button data-go="3" type="button">기획과 제안</button><button data-go="4" type="button">마무리</button></nav>
-<section class="panel wizard-panel" id="intro"><span class="step">시작</span><h2>나의 지역 탐구 프로젝트</h2><p class="sub">탐구 대상 지역을 정하고 자신의 정보를 입력하세요.</p><div class="grid"><div class="field"><label for="schoolClass">학년 · 반</label><input data-answer="" id="schoolClass" placeholder="예: 2학년 2반" type="text"/></div><div class="field"><label for="student">이름</label><input data-answer="" id="student" placeholder="예: 자홍이" type="text"/></div><div class="field"><label for="province">탐구 지역 · 시도</label><select data-answer="" id="province" aria-label="탐구 지역 시도 선택"><option value="">시·도를 선택하세요</option></select></div><div class="field"><label for="region">탐구 지역 · 시군구</label><select data-answer="" id="region" aria-label="탐구 지역 시군구 선택"><option value="">시·군·구를 선택하세요</option></select></div><div class="field"><label for="date">작성일</label><input data-answer="" id="date" type="date"/></div></div><div class="callout" id="browserGuide"><b>수행평가 진행 방법</b><p>원활한 답안 작성과 결과물 저장을 위해 카카오톡 내부 브라우저가 아닌 외부 브라우저에서 접속해 주세요.</p><ul><li>아이폰 / 아이패드 : Safari(사파리) 권장</li><li>갤럭시 : Chrome(크롬) 또는 삼성 인터넷 권장</li><li>PC : Chrome(크롬) 또는 Edge(엣지) 권장</li></ul><p>카카오톡에서 링크를 받았다면 '다른 브라우저로 열기'를 선택하거나 링크를 복사해 권장 브라우저에서 접속하세요.</p><p><strong>※ 브라우저를 변경하면 기존에 작성한 답안이 자동으로 옮겨지지 않을 수 있으므로 가급적이면 처음부터 권장 브라우저를 활용하여 접속해 주세요.</strong></p></div><div class="callout"><b>탐구 핵심 질문</b><br/>우리 지역을 다른 지역과 구별해 주는 특징은 무엇이며, 어떤 장소를 새로운 핫 플레이스로 발전시킬 수 있을까?<br/><span class="small">핫 플레이스: 사람들이 관심을 갖고 방문하고 싶어 하는 장소 / 장소성: 자연·인문환경과 경험·의미가 결합해 형성된 장소의 고유한 성격</span></div></section>
-<section class="panel wizard-panel" hidden="" id="step1"><span class="step">자료 조사와 분석</span><h2>우리 지역의 관광 특징 알아보기</h2><p class="sub">자료별로 기관/작성자, 발행 시기, URL을 기록하세요.</p><div class="callout"><b>자료 탐색 도구</b><div class="sources"><a href="https://datalab.visitkorea.or.kr/" rel="noopener noreferrer" target="_blank">한국관광 데이터랩 ↗</a><a href="https://sgis.mods.go.kr/view/index/" rel="noopener noreferrer" target="_blank">통계지리정보서비스 ↗</a><a href="https://www.bigkinds.or.kr/" rel="noopener noreferrer" target="_blank">빅카인즈 뉴스 검색 ↗</a></div><p class="small">통계의 조사 기간, 단위, 지역 범위와 자료 작성 기관을 확인하세요. 기사에 등장하는 수치는 원자료와 대조하면 더 좋아요.</p></div>
+
+/* 저장 안내 창 · 카카오톡 안내 */
+.ws-lock{overflow:hidden}
+.ws-modal{position:fixed;inset:0;z-index:100;background:rgba(17,21,23,.5);display:flex;align-items:center;justify-content:center;padding:16px}
+.ws-dialog{background:var(--paper);border:1px solid var(--line);border-radius:6px;max-width:470px;width:100%;
+  max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.ws-dialog.wide{max-width:760px}
+.ws-body{padding:20px 20px 8px;overflow:auto;-webkit-overflow-scrolling:touch}
+.ws-body h3{font-size:18px;font-weight:600;line-height:1.45;margin:0 0 10px;padding-bottom:10px;border-bottom:2px solid var(--acc)}
+.ws-body p{margin:8px 0;font-size:14.5px;color:var(--mid)}
+.ws-body b{color:var(--ink);font-weight:600}
+.ws-steps{margin:10px 0 10px 18px;font-size:14px;color:var(--mid)}.ws-steps li{margin:6px 0}
+.ws-files{margin:8px 0 8px 18px;font-size:13.5px}
+.ws-hint{background:var(--food-w);border:1px solid var(--food-l);padding:10px 12px;border-radius:3px;font-size:13.5px!important}
+.ws-pages figure{margin:12px 0}
+.ws-pages img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:3px;-webkit-touch-callout:default;-webkit-user-select:auto;user-select:auto}
+.ws-pages figcaption{text-align:center;font-size:12px;color:var(--soft);margin-top:4px}
+.ws-actions{display:flex;flex-wrap:wrap;gap:8px;padding:14px 20px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line2)}
+.ws-actions .btn{flex:1 1 150px}
+.ws-spinner{width:32px;height:32px;border:3px solid var(--line);border-top-color:var(--acc);border-radius:50%;animation:ws-spin .8s linear infinite;margin:16px auto}
+@keyframes ws-spin{to{transform:rotate(360deg)}}
+.inapp-banner{max-width:var(--w);margin:14px auto 0;padding:0 30px}
+.inapp-banner>div{background:var(--food-w);border:1px solid var(--food-l);border-radius:3px;padding:11px 14px;font-size:13.5px;
+  color:var(--mid);display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.inapp-banner b{color:var(--food);font-weight:600}
+@media(max-width:640px){.inapp-banner{padding:0 16px}.inapp-banner .btn{width:100%}}
+</style></head><body>
+<header class="top no-print"><div class="hin"><div class="brand"><span>한국지리 탐구 수행평가 · 장소의 가치와 핫 플레이스</span><span class="sp"></span><span class="tools"><span aria-live="polite" class="status" id="saveStatus">저장 준비 완료</span><span class="progress" title="작성 진행률"><span id="progressFill" style="display:block"></span></span><span class="status" id="progressText">0%</span><button class="link" id="saveBtn" type="button">임시 저장</button><button class="link" id="loadBtn" type="button">불러오기</button></span></div><nav aria-label="활동 단계" class="seg"><button data-go="0" type="button">시작</button><button data-go="1" type="button">1. 자료 조사</button><button data-go="2" type="button">2. 장소 선정</button><button data-go="3" type="button">3. 기획과 제안</button><button data-go="4" type="button">4. 정리하고 제출</button></nav></div></header>
+<main class="shell"><div class="mast"><h1>장소의 가치로 읽는<br/>우리 지역 핫 플레이스</h1></div>
+<section class="panel wizard-panel" id="intro"><div class="sec-h"><span class="sec-n">시작</span><h2 class="sec-t">나의 지역 탐구 프로젝트</h2></div><p class="sub">탐구 대상 지역을 정하고 자신의 정보를 입력하세요.</p><div class="infobox"><div class="grid"><div class="field"><label for="schoolClass">학년 · 반</label><input data-answer="" id="schoolClass" placeholder="예: 2학년 2반" type="text"/></div><div class="field"><label for="student">이름</label><input data-answer="" id="student" placeholder="예: 자홍이" type="text"/></div><div class="field"><label for="province">탐구 지역 · 시도</label><select data-answer="" id="province" aria-label="탐구 지역 시도 선택"><option value="">시·도를 선택하세요</option></select></div><div class="field"><label for="region">탐구 지역 · 시군구</label><select data-answer="" id="region" aria-label="탐구 지역 시군구 선택"><option value="">시·군·구를 선택하세요</option></select></div><div class="field"><label for="date">작성일</label><input data-answer="" id="date" type="date"/></div></div></div><div class="callout" id="browserGuide"><b>수행평가 진행 방법</b><p>카카오톡에서 링크를 바로 열어도 답안을 작성하고 저장할 수 있어요. 다만 카카오톡 안에서는 파일 다운로드가 제한되기 때문에, 저장 버튼을 누르면 <strong>작성한 답안을 그대로 가지고 외부 브라우저로 이동</strong>하거나 <strong>이미지로 저장</strong>하는 방법이 안내됩니다.</p><ul><li>아이폰 / 아이패드 : Safari(사파리) 권장</li><li>갤럭시 : Chrome(크롬) 또는 삼성 인터넷 권장</li><li>PC : Chrome(크롬) 또는 Edge(엣지) 권장</li></ul><p>작성 중인 답안은 이 기기에 자동으로 임시 저장돼요. 다른 기기로 옮길 때는 'HTML 저장'으로 받은 파일을 '저장 파일 불러오기'로 열면 이어서 작성할 수 있습니다.</p></div><div class="callout place"><b>탐구 핵심 질문</b><br/>우리 지역을 다른 지역과 구별해 주는 특징은 무엇이며, 어떤 장소를 새로운 핫 플레이스로 발전시킬 수 있을까?<br/><span class="small">핫 플레이스: 사람들이 관심을 갖고 방문하고 싶어 하는 장소 / 장소성: 자연·인문환경과 경험·의미가 결합해 형성된 장소의 고유한 성격</span></div></section>
+<section class="panel wizard-panel" hidden="" id="step1"><div class="sec-h"><span class="sec-n">1</span><h2 class="sec-t">우리 지역의 관광 특징 알아보기</h2></div><p class="sub">자료별로 기관/작성자, 발행 시기, URL을 기록하세요.</p><div class="callout place"><b>자료 탐색 도구</b><div class="sources"><a href="https://datalab.visitkorea.or.kr/" rel="noopener noreferrer" target="_blank">한국관광 데이터랩 ↗</a><a href="https://sgis.mods.go.kr/view/index/" rel="noopener noreferrer" target="_blank">통계지리정보서비스 ↗</a><a href="https://www.bigkinds.or.kr/" rel="noopener noreferrer" target="_blank">빅카인즈 뉴스 검색 ↗</a></div><p class="small">통계의 조사 기간, 단위, 지역 범위와 자료 작성 기관을 확인하세요. 기사에 등장하는 수치는 원자료와 대조하면 더 좋아요.</p></div>
 <div class="question"><div class="qtitle"><span class="num">1</span>우리 지역의 방문객 특징</div><span class="hint">방문객 수와 방문객 연령대를 각각 작성하세요. 조사 기간과 수치의 단위도 확인하세요.</span><label class="answer-sub" for="visitors">방문객 수</label><textarea data-answer="" id="visitors"></textarea><label class="answer-sub" for="ages">방문객 연령대</label><textarea data-answer="" id="ages"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">2</span>우리 지역의 주요 방문 장소</div><span class="hint">우리 지역의 인기 방문 장소를 두 곳 이상 제시하고, 이름과 특징을 적어주세요.</span><textarea data-answer="" id="popular"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">3</span>우리 지역의 관광 특징</div><span class="hint">앞에서 조사한 방문객 특징과 주요 방문 장소를 분석한 결과를 바탕으로 작성하세요.</span><textarea data-answer="" id="analysis"></textarea></div>
 <h3>출처</h3><p class="sub">자료마다 기관/작성자, 제목, 조사·발행 시기, URL을 구체적으로 적으세요.</p><div class="refcard"><div class="refhead"><strong>자료 ①</strong></div><div class="grid"><div class="field"><label for="src1title">기관/작성자</label><input data-answer="" id="src1title"/></div><div class="field"><label for="src1date">발행 시기</label><input data-answer="" id="src1date"/></div></div><div class="field"><label for="src1url">URL</label><input data-answer="" id="src1url"/></div></div><div class="refcard"><div class="refhead"><strong>자료 ②</strong></div><div class="grid"><div class="field"><label for="src2title">기관/작성자</label><input data-answer="" id="src2title"/></div><div class="field"><label for="src2date">발행 시기</label><input data-answer="" id="src2date"/></div></div><div class="field"><label for="src2url">URL</label><input data-answer="" id="src2url"/></div></div><div class="field"><label for="srcExtra">추가 출처 (선택)</label><textarea data-answer="" id="srcExtra"></textarea></div></section>
-<section class="panel wizard-panel" hidden="" id="step2"><span class="step">장소 선정</span><h2>우리 지역의 새로운 핫 플레이스 선정</h2><p class="sub">이미 잘 알려진 곳을 단순히 소개하는 데 그치지 않고, 우리 지역의 새로운 핫 플레이스로 무엇이 있을지 고민해 보세요.</p><div class="grid"><div class="field"><label for="placeName">선정한 장소 이름</label><input data-answer="" id="placeName" placeholder="예: ○○ 옛 철길 주변"/></div><div class="field"><label for="placeLocation">장소 위치</label><input data-answer="" id="placeLocation" placeholder="주소, 동네, 인근 지형지물 등"/></div></div>
+<section class="panel wizard-panel" hidden="" id="step2"><div class="sec-h"><span class="sec-n">2</span><h2 class="sec-t">우리 지역의 새로운 핫 플레이스 선정</h2></div><p class="sub">이미 잘 알려진 곳을 단순히 소개하는 데 그치지 않고, 우리 지역의 새로운 핫 플레이스로 무엇이 있을지 고민해 보세요.</p><div class="grid"><div class="field"><label for="placeName">선정한 장소 이름</label><input data-answer="" id="placeName" placeholder="예: ○○ 옛 철길 주변"/></div><div class="field"><label for="placeLocation">장소 위치</label><input data-answer="" id="placeLocation" placeholder="주소, 동네, 인근 지형지물 등"/></div></div>
 <div class="question"><div class="qtitle"><span class="num">1</span>해당 장소를 선정한 이유</div><span class="hint">지역 조사 결과, 현재 이용 모습, 발전 가능성 등을 근거로 설명하세요.</span><textarea data-answer="" id="reason" placeholder="왜 이 장소를 핫 플레이스로 만들고 싶은가?"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">2</span>해당 장소의 지리적 특징</div><span class="hint">자연환경 또는 인문환경의 구체적인 특징을 2가지 작성하세요.</span><textarea aria-label="지리적 특징 두 가지를 하나의 칸에 작성" data-answer="" id="geo1" placeholder="① 자연환경 또는 인문환경의 구체적인 특징
 
 ② 자연환경 또는 인문환경의 구체적인 특징" style="min-height:185px"></textarea></div><div class="question"><div class="qtitle"><span class="num">3</span>해당 장소가 핫 플레이스로서 지니는 가치</div><span class="hint">지역 주민과 방문객에게 제공할 수 있는 문화·역사·경관·경제·공동체적 가치 등을 설명하세요.</span><textarea data-answer="" id="value" placeholder="이 장소가 사람들에게 어떤 특별한 경험이나 의미를 줄 수 있을까?"></textarea></div>
 </section>
-<section class="panel wizard-panel" hidden="" id="step3"><span class="step">기획과 제안</span><h2>새로운 핫 플레이스의 장소성을 살린 마케팅</h2><p class="sub">자신이 선정한 장소만의 고유한 특징을 살려 사람들이 방문하고 싶도록 만드는 장소 마케팅을 기획하세요.</p><div class="callout warm"><b>기획 조건</b><br/>① 마케팅 대상을 명확하게 설정할 것<br/>② 마케팅을 통해 해당 장소의 어떤 매력을 부각할지 설명할 것<br/>③ 지역과 지역 주민에게 미치는 긍정적·부정적 영향을 함께 고려할 것</div>
+<section class="panel wizard-panel" hidden="" id="step3"><div class="sec-h"><span class="sec-n">3</span><h2 class="sec-t">새로운 핫 플레이스의 장소성을 살린 마케팅</h2></div><p class="sub">자신이 선정한 장소만의 고유한 특징을 살려 사람들이 방문하고 싶도록 만드는 장소 마케팅을 기획하세요.</p><div class="callout warm"><b>기획 조건</b><br/>① 마케팅 대상을 명확하게 설정할 것<br/>② 마케팅을 통해 해당 장소의 어떤 매력을 부각할지 설명할 것<br/>③ 지역과 지역 주민에게 미치는 긍정적·부정적 영향을 함께 고려할 것</div>
 <div class="question"><div class="qtitle"><span class="num">1</span>마케팅 프로젝트명</div><div class="field"><input data-answer="" id="campaign"/></div></div>
 <div class="question"><div class="qtitle"><span class="num">2</span>마케팅 대상과 선정 이유</div><textarea data-answer="" id="target" placeholder="누구를 대상으로 했는가, 왜 대상으로 선정하였는가?"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">3</span>마케팅 전략과 방법</div><span class="hint">해당 장소의 자연환경·인문환경과 고유한 장소성을 반영하여 구체적인 실행 방법을 작성하세요.</span><textarea data-answer="" id="strategy" style="min-height:190px"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">4</span>지역과 지역 주민에게 미칠 긍정적 영향</div><span class="hint">장소 마케팅으로 지역과 주민에게 기대되는 긍정적인 변화를 구체적으로 설명하세요.</span><textarea data-answer="" id="impact" placeholder="예: 지역 상권 활성화, 일자리 창출, 지역 문화 보전, 주민 참여 확대 등"></textarea></div>
 <div class="question"><div class="qtitle"><span class="num">5</span>지역과 지역 주민에게 미칠 부정적 영향</div><span class="hint">관광객 증가나 개발로 인해 지역과 주민이 겪을 수 있는 부정적인 영향을 구체적으로 설명하세요.</span><textarea data-answer="" id="measure" placeholder="예: 혼잡, 소음, 쓰레기 증가, 임대료 상승, 주민 생활 불편 등"></textarea></div></section>
-<section class="panel wizard-panel" hidden="" id="review"><span class="step">마무리</span><h2>마무리</h2><p class="sub">활동 소감을 작성하고 수행평가 결과물을 저장하여 제출하세요.</p><div class="question"><div class="qtitle">활동 소감</div><div class="callout warm"><b>작성 안내</b> 이 활동 소감은 학교생활기록부 교과 세부능력 및 특기사항(과세특) 작성에 참고할 수 있는 내용이므로, 실제로 수행한 활동과 배운 점을 바탕으로 신중하고 구체적으로 작성해 주세요.</div><textarea data-answer="" id="reflection" placeholder="수행평가 과정에서 느낀 점, 수행평가 과정에서 인상 깊었던 점, 새롭게 알게 된 사실 등을 작성하세요." style="min-height:210px"></textarea></div><div class="callout warm" id="submissionGuide"><b>수행평가 저장 및 제출 방법</b><p>활동을 마친 후에는 결과물을 PDF 또는 이미지(PNG) 파일로 저장해 주세요.</p><ul><li>아이폰 / 아이패드 : Safari의 공유·프린트 기능을 이용해 PDF 저장</li><li>갤럭시 : Chrome 또는 삼성 인터넷의 인쇄 메뉴에서 PDF로 저장</li><li>PC : PDF 저장 버튼을 누르고 'PDF로 저장' 선택</li></ul><p>PDF 저장이 되지 않는 경우 이미지(PNG) 파일로 저장하거나 작성한 웹페이지를 직접 캡쳐하여 제출해도 됩니다.</p><p>저장한 결과물이 정상적으로 열리는지 확인한 뒤 '한국지리 탐구 오픈 채팅방'에 제출해 주세요.</p><p><strong>※ 지각 제출 시 감점이 있으므로 반드시 제출 기한을 지켜 주세요.</strong></p></div><div class="sources no-print"><button class="btn primary" id="bottomExport">작성 결과물 HTML 저장</button><button class="btn" id="bottomShare" type="button">파일 공유·저장 (카카오톡용)</button><button class="btn" id="bottomPrint">PDF로 저장 / 인쇄</button><button class="btn" id="bottomImage" type="button">이미지(PNG) 저장</button><button class="btn" id="resetBtn">전체 답안 초기화</button></div></section><div class="wizard-controls no-print"><button class="btn" id="prevStep" type="button">← 이전</button><span aria-live="polite" class="wizard-counter" id="stepCounter">1 / 5</span><button class="btn primary" id="nextStep" type="button">다음 →</button></div><p class="footer">장소의 가치로 읽는 우리 지역 핫 플레이스 : 한국지리 탐구 수행평가</p></main><input accept=".html,.json" hidden="" id="fileInput" type="file"/>
+<section class="panel wizard-panel" hidden="" id="review"><div class="sec-h"><span class="sec-n">4</span><h2 class="sec-t">정리하고 제출하기</h2></div><p class="sub">활동 소감을 작성하고 수행평가 결과물을 저장하여 제출하세요.</p><div class="question"><div class="qtitle">활동 소감</div><div class="callout warm"><b>작성 안내</b> 이 활동 소감은 학교생활기록부 교과 세부능력 및 특기사항(과세특) 작성에 참고할 수 있는 내용이므로, 실제로 수행한 활동과 배운 점을 바탕으로 신중하고 구체적으로 작성해 주세요.</div><textarea data-answer="" id="reflection" placeholder="수행평가 과정에서 느낀 점, 수행평가 과정에서 인상 깊었던 점, 새롭게 알게 된 사실 등을 작성하세요." style="min-height:210px"></textarea></div><div class="callout warm" id="submissionGuide"><b>수행평가 저장 방법</b><p>활동을 마친 후에는 아래 버튼 중 하나를 눌러 결과물을 저장해 주세요. 어떤 형식으로 저장하든 모든 단계의 질문과 답안이 함께 담깁니다.</p><ul><li>PDF 파일 저장 (권장) : 인쇄 창을 거치지 않고 PDF 파일이 바로 만들어져요.</li><li>이미지(PNG) 저장 : 한 쪽마다 이미지 한 장씩 만들어져요. 여러 장이면 모두 제출해 주세요.</li><li>HTML 파일 저장 : 웹페이지 파일로 저장돼요. 나중에 위쪽의 '불러오기'로 열어 이어서 작성할 수도 있어요.</li></ul><p><strong>기기별 저장 방법</strong></p><ul><li>스마트폰 / 태블릿PC : 파일이 만들어지면 '공유하기'를 눌러 카카오톡 오픈 채팅방에 바로 보내거나, '파일 다운로드'로 기기에 저장하세요. 이미지는 길게 눌러 사진 앱에 저장할 수도 있어요.</li><li>PC : 원하는 형식의 저장 버튼 → '파일 다운로드'</li></ul><p>PDF 또는 HTML 파일로 저장되지 않는 경우 이미지(PNG) 파일로 저장하거나 작성한 웹페이지를 직접 캡쳐하여 제출해도 됩니다.</p><p>저장한 결과물이 정상적으로 열리는지 확인한 뒤 '한국지리 탐구 오픈 채팅방'에 제출해 주세요.</p><p><strong>※ 지각 제출 시 감점이 있으므로 반드시 제출 기한을 지켜 주세요.</strong></p></div><div class="savebox no-print"><div class="sources"><button class="btn primary" id="bottomPdf" type="button">PDF 파일 저장</button><button class="btn" id="bottomImage" type="button">이미지(PNG) 저장</button><button class="btn" id="bottomExport" type="button">HTML 파일 저장</button><button class="btn" id="bottomPrint" type="button">인쇄하기 (PC)</button><button class="btn" id="resetBtn" type="button">전체 답안 초기화</button></div></div></section><div class="wizard-controls no-print"><button class="btn" id="prevStep" type="button">← 이전</button><span aria-live="polite" class="wizard-counter" id="stepCounter">1 / 5</span><button class="btn primary" id="nextStep" type="button">다음 →</button></div><p class="footer no-print">장소의 가치로 읽는 우리 지역 핫 플레이스 · 한국지리 탐구 활동지</p></main><input accept=".html,.json" hidden="" id="fileInput" type="file"/>
 <script>
 /* 지역 선택은 외부 서버 없이 작동합니다. */
 const REGION_OPTIONS = {"서울특별시": ["종로구", "중구", "용산구", "성동구", "광진구", "동대문구", "중랑구", "성북구", "강북구", "도봉구", "노원구", "은평구", "서대문구", "마포구", "양천구", "강서구", "구로구", "금천구", "영등포구", "동작구", "관악구", "서초구", "강남구", "송파구", "강동구"], "부산광역시": ["중구", "서구", "동구", "영도구", "부산진구", "동래구", "남구", "북구", "해운대구", "사하구", "금정구", "강서구", "연제구", "수영구", "사상구", "기장군"], "대구광역시": ["중구", "동구", "서구", "남구", "북구", "수성구", "달서구", "달성군", "군위군"], "인천광역시": ["중구", "동구", "미추홀구", "연수구", "남동구", "부평구", "계양구", "서구", "강화군", "옹진군"], "전남광주통합특별시": ["동구", "서구", "남구", "북구", "광산구", "목포시", "여수시", "순천시", "나주시", "광양시", "담양군", "곡성군", "구례군", "고흥군", "보성군", "화순군", "장흥군", "강진군", "해남군", "영암군", "무안군", "함평군", "영광군", "장성군", "완도군", "진도군", "신안군"], "대전광역시": ["동구", "중구", "서구", "유성구", "대덕구"], "울산광역시": ["중구", "남구", "동구", "북구", "울주군"], "세종특별자치시": ["세종특별자치시"], "경기도": ["수원시", "성남시", "의정부시", "안양시", "부천시", "광명시", "평택시", "동두천시", "안산시", "고양시", "과천시", "구리시", "남양주시", "오산시", "시흥시", "군포시", "의왕시", "하남시", "용인시", "파주시", "이천시", "안성시", "김포시", "화성시", "광주시", "양주시", "포천시", "여주시", "연천군", "가평군", "양평군"], "강원특별자치도": ["춘천시", "원주시", "강릉시", "동해시", "태백시", "속초시", "삼척시", "홍천군", "횡성군", "영월군", "평창군", "정선군", "철원군", "화천군", "양구군", "인제군", "고성군", "양양군"], "충청북도": ["청주시", "충주시", "제천시", "보은군", "옥천군", "영동군", "증평군", "진천군", "괴산군", "음성군", "단양군"], "충청남도": ["천안시", "공주시", "보령시", "아산시", "서산시", "논산시", "계룡시", "당진시", "금산군", "부여군", "서천군", "청양군", "홍성군", "예산군", "태안군"], "전북특별자치도": ["전주시", "군산시", "익산시", "정읍시", "남원시", "김제시", "완주군", "진안군", "무주군", "장수군", "임실군", "순창군", "고창군", "부안군"], "경상북도": ["포항시", "경주시", "김천시", "안동시", "구미시", "영주시", "영천시", "상주시", "문경시", "경산시", "의성군", "청송군", "영양군", "영덕군", "청도군", "고령군", "성주군", "칠곡군", "예천군", "봉화군", "울진군", "울릉군"], "경상남도": ["창원시", "진주시", "통영시", "사천시", "김해시", "밀양시", "거제시", "양산시", "의령군", "함안군", "창녕군", "고성군", "남해군", "하동군", "산청군", "함양군", "거창군", "합천군"], "제주특별자치도": ["제주시", "서귀포시"]};
@@ -112,115 +219,402 @@ for(const name of Object.keys(REGION_OPTIONS)) provinceSelect.add(new Option(nam
 provinceSelect.addEventListener('change',()=>{setRegionDistricts(provinceSelect.value);document.getElementById('region').dispatchEvent(new Event('input',{bubbles:true}));});
 </script>
 <script>
-(function(){'use strict';const KEY='local_hotplace_worksheet_v1';const fields=[...document.querySelectorAll('[data-answer]')],checks=[...document.querySelectorAll('[data-check]')],status=document.getElementById('saveStatus');let timer;function snapshot(){const a={};fields.forEach(x=>a[x.id]=x.value);return {version:1,answers:a,checks:checks.map(x=>x.checked),savedAt:new Date().toISOString()}}function apply(d){if(!d||!d.answers||typeof d.answers!=='object')throw Error('올바른 활동지 데이터가 아닙니다.');if(d.answers.geo2&& !String(d.answers.geo1||'').includes(String(d.answers.geo2))){d.answers.geo1=[d.answers.geo1,d.answers.geo2].filter(Boolean).join('\n\n');}// 이전 버전에서 저장한 지역 문자열도 가능한 경우 새 선택 메뉴로 변환합니다.
-let oldRegion=String(d.answers.region??'');
-let prov=String(d.answers.province??'');
-if(prov==='광주광역시'||prov==='전라남도')prov='전남광주통합특별시';
-if(!prov && oldRegion && /광주광역시|전라남도/.test(oldRegion))prov='전남광주통합특별시';
-if(!prov && oldRegion){for(const [p,ds] of Object.entries(REGION_OPTIONS)){if(oldRegion.includes(p)|| (p==='강원특별자치도'&&oldRegion.includes('강원도'))){prov=p;break;}}}
-if(!prov && oldRegion){for(const [p,ds] of Object.entries(REGION_OPTIONS)){if(ds.includes(oldRegion.trim())){prov=p;break;}}}
-if(prov) d.answers.province=prov;
-setRegionDistricts(prov, oldRegion.trim().split(/\s+/).at(-1));
-fields.forEach(x=>{if(x.id==='region' && oldRegion && !REGION_OPTIONS[prov]?.includes(oldRegion)){let last=oldRegion.trim().split(/\s+/).at(-1);x.value=REGION_OPTIONS[prov]?.includes(last)?last:'';}else x.value=String(d.answers[x.id]??'')});checks.forEach((x,i)=>x.checked=!!(d.checks||[])[i]);progress()}function progress(){const total=fields.length,filled=fields.filter(x=>x.value.trim()).length,p=Math.round(filled/total*100);document.getElementById('progressFill').style.width=p+'%';document.getElementById('progressText').textContent=p+'%'}function save(){try{localStorage.setItem(KEY,JSON.stringify(snapshot()));status.textContent='이 기기에 임시 저장됨 · '+new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});}catch(e){status.textContent='임시 저장 불가 · 결과물 파일로 저장하세요.'}}function schedule(){progress();status.textContent='작성 중…';clearTimeout(timer);timer=setTimeout(save,650)}fields.forEach(x=>x.addEventListener('input',schedule));checks.forEach(x=>x.addEventListener('change',schedule));document.getElementById('saveBtn').onclick=save;
-function filename(){const v=id=>(document.getElementById(id).value||'').trim().replace(/[\\/:*?"<>|\s]+/g,'_').slice(0,35);return '핫플레이스_탐구_'+(v('student')||'학생')+'_'+(v('province')||'시도')+'_'+(v('region')||'지역')+'.html'}function download(content,name,type){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)}function exportHtml(){save();const clone=document.documentElement.cloneNode(true);const originals=[...document.querySelectorAll('[data-answer]')],copies=[...clone.querySelectorAll('[data-answer]')];originals.forEach((el,i)=>{const cp=copies[i];if(el.tagName==='TEXTAREA'){cp.textContent=el.value;}else if(el.tagName==='SELECT'){[...cp.options].forEach(o=>{if(o.value===el.value)o.setAttribute('selected','');else o.removeAttribute('selected')})}else{cp.setAttribute('value',el.value)}});const copiedChecks=[...clone.querySelectorAll('[data-check]')];checks.forEach((el,i)=>{if(el.checked)copiedChecks[i].setAttribute('checked','');else copiedChecks[i].removeAttribute('checked')});const serialized='<!doctype html>\n'+clone.outerHTML;download(serialized,filename(),'text/html;charset=utf-8');status.textContent='결과물 HTML 파일 저장 요청 완료'}document.getElementById('exportBtn').onclick=exportHtml;document.getElementById('bottomExport').onclick=exportHtml;
-function printPage(){save();window.print()}document.getElementById('printBtn').onclick=printPage;document.getElementById('bottomPrint').onclick=printPage;
-const fileInput=document.getElementById('fileInput');document.getElementById('loadBtn').onclick=()=>fileInput.click();fileInput.onchange=async()=>{const f=fileInput.files[0];if(!f)return;try{const s=await f.text();let data;if(f.name.toLowerCase().endsWith('.json'))data=JSON.parse(s);else{const doc=new DOMParser().parseFromString(s,'text/html');if(!doc.querySelector('[data-answer]'))throw Error('이 활동지에서 저장한 HTML 파일이 아닙니다.');const a={};doc.querySelectorAll('[data-answer]').forEach(el=>a[el.id]=el.tagName==='TEXTAREA'?el.value:el.tagName==='SELECT'?(el.querySelector('option[selected]')?.value||el.value):el.getAttribute('value')||'');data={answers:a,checks:[...doc.querySelectorAll('[data-check]')].map(el=>el.checked)}}if(!confirm('현재 작성 중인 내용을 불러온 파일의 답안으로 바꿀까요?'))return;apply(data);save();status.textContent='저장 파일을 불러왔습니다.'}catch(e){alert('파일을 불러오지 못했습니다: '+e.message)}finally{fileInput.value=''}};
-document.getElementById('resetBtn').onclick=()=>{if(!confirm('모든 답안과 임시 저장 내용을 초기화할까요? 이 작업은 되돌릴 수 없습니다.'))return;fields.forEach(x=>x.value='');setRegionDistricts('');checks.forEach(x=>x.checked=false);try{localStorage.removeItem(KEY)}catch(e){}progress();status.textContent='초기화 완료'};
-try{const d=localStorage.getItem(KEY);if(d){apply(JSON.parse(d));status.textContent='이 기기에 저장된 답안을 복원했습니다.'}}catch(e){status.textContent='저장 데이터 복원 실패'}progress();
-const pages=[...document.querySelectorAll('.wizard-panel')];const tabs=[...document.querySelectorAll('[data-go]')];let currentPage=0;
-function showPage(index){currentPage=Math.max(0,Math.min(pages.length-1,index));pages.forEach((p,i)=>p.hidden=i!==currentPage);tabs.forEach((b,i)=>{b.classList.toggle('active',i===currentPage);b.setAttribute('aria-current',i===currentPage?'step':'false')});document.getElementById('prevStep').disabled=currentPage===0;const next=document.getElementById('nextStep');next.disabled=currentPage===pages.length-1;next.textContent=currentPage===pages.length-1?'작성 완료':'다음 →';document.getElementById('stepCounter').textContent=(currentPage+1)+' / '+pages.length;window.scrollTo({top:0,behavior:'auto'});const active=tabs[currentPage];if(active&&window.innerWidth<=640)active.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});}
-tabs.forEach(b=>b.addEventListener('click',()=>showPage(Number(b.dataset.go))));document.getElementById('prevStep').addEventListener('click',()=>showPage(currentPage-1));document.getElementById('nextStep').addEventListener('click',()=>showPage(currentPage+1));showPage(0);
-})();
-</script>
-<script>
-/* 5차 수정: 출력 시 긴 답변 보존 + 오프라인 PNG 이미지 저장 */
 (function(){'use strict';
-const answerEls=[...document.querySelectorAll('[data-answer]')];
-let printed=[];
-function beforePrint(){
-  printed.forEach(x=>x.remove());printed=[];
-  answerEls.forEach(el=>{
-    const div=document.createElement('div');div.className='print-answer print-only';
-    div.textContent=el.value||'(미작성)';el.classList.add('print-replaced');
-    el.insertAdjacentElement('afterend',div);printed.push(div);
-  });
+/* =========================================================
+   10차 수정
+   - 결과물 HTML: 모든 단계 + 학생 답안이 '글자'로 들어간 독립 보고서로 저장
+   - PDF: 인쇄 창 없이 PDF 파일을 바로 만들어 저장 (휴대폰에서도 동작)
+   - 이미지: 페이지별 PNG를 화면에 띄워 다운로드·공유·길게 눌러 저장
+   - 카카오톡 인앱 브라우저: 답안을 그대로 가지고 외부 브라우저로 이동,
+     또는 카카오톡 안에서 이미지로 저장
+   ========================================================= */
+const KEY='local_hotplace_worksheet_v1';
+const TITLE='장소의 가치로 읽는 우리 지역 핫 플레이스';
+const $=id=>document.getElementById(id);
+const fields=[...document.querySelectorAll('[data-answer]')];
+const checks=[...document.querySelectorAll('[data-check]')];
+const status=$('saveStatus');
+const UA=navigator.userAgent||'';
+const IS_KAKAO=/KAKAOTALK/i.test(UA);
+const IS_INAPP=IS_KAKAO||/(; wv\))|FBAN|FBAV|Instagram|NAVER\(inapp|Line\/|everytimeApp|DaumApps|BAND\//i.test(UA);
+const IS_IOS=/iPad|iPhone|iPod/.test(UA)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let timer;
+
+/* ---------- 답안 저장 · 복원 ---------- */
+function snapshot(){const a={};fields.forEach(x=>a[x.id]=x.value);return {version:1,answers:a,checks:checks.map(x=>x.checked),savedAt:new Date().toISOString()}}
+function hasAnswers(d){return !!(d&&d.answers&&Object.values(d.answers).some(v=>String(v||'').trim()));}
+function apply(d){
+ if(!d||!d.answers||typeof d.answers!=='object')throw Error('올바른 활동지 데이터가 아닙니다.');
+ if(d.answers.geo2&&!String(d.answers.geo1||'').includes(String(d.answers.geo2))){d.answers.geo1=[d.answers.geo1,d.answers.geo2].filter(Boolean).join('\n\n');}
+ // 이전 버전에서 저장한 지역 문자열도 가능한 경우 새 선택 메뉴로 변환합니다.
+ let oldRegion=String(d.answers.region??'');
+ let prov=String(d.answers.province??'');
+ if(prov==='광주광역시'||prov==='전라남도')prov='전남광주통합특별시';
+ if(!prov&&oldRegion&&/광주광역시|전라남도/.test(oldRegion))prov='전남광주통합특별시';
+ if(!prov&&oldRegion){for(const [p] of Object.entries(REGION_OPTIONS)){if(oldRegion.includes(p)||(p==='강원특별자치도'&&oldRegion.includes('강원도'))){prov=p;break;}}}
+ if(!prov&&oldRegion){for(const [p,ds] of Object.entries(REGION_OPTIONS)){if(ds.includes(oldRegion.trim())){prov=p;break;}}}
+ if(prov)d.answers.province=prov;
+ setRegionDistricts(prov,oldRegion.trim().split(/\s+/).at(-1));
+ fields.forEach(x=>{if(x.id==='region'&&oldRegion&&!REGION_OPTIONS[prov]?.includes(oldRegion)){let last=oldRegion.trim().split(/\s+/).at(-1);x.value=REGION_OPTIONS[prov]?.includes(last)?last:'';}else x.value=String(d.answers[x.id]??'')});
+ checks.forEach((x,i)=>x.checked=!!(d.checks||[])[i]);
+ progress();
 }
-function afterPrint(){printed.forEach(x=>x.remove());printed=[];answerEls.forEach(x=>x.classList.remove('print-replaced'));}
-window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);
-const W=1240,H=1754,M=82,MAX=W-M*2;
-function makeCanvas(){let c=document.createElement('canvas');c.width=W;c.height=H;return c;}
-function nameFile(){let s=(document.getElementById('student')?.value||'학생').trim().replace(/[\\/:*?"<>|\s]+/g,'_');return '핫플레이스_탐구_'+(s||'학생');}
-function saveCanvas(c,filename){return new Promise(resolve=>c.toBlob(blob=>{if(!blob){resolve(false);return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),12000);resolve(true);},'image/png'));}
-function lines(ctx,str,maxWidth){const result=[];for(const para of String(str||'').split('\n')){if(!para){result.push(' ');continue;}let line='';for(const char of para){if(ctx.measureText(line+char).width>maxWidth&&line){result.push(line);line=char;}else line+=char;}result.push(line);}return result;}
-async function exportPng(){
-  try{
-    if(document.fonts?.ready)await document.fonts.ready;
-    let c=makeCanvas(),ctx=c.getContext('2d'),y=0,page=0;
-    const font='"Malgun Gothic","Apple SD Gothic Neo",sans-serif';
-    function newPage(){ctx.fillStyle='#ffffff';ctx.fillRect(0,0,W,H);y=M;ctx.fillStyle='#087e83';ctx.fillRect(M,y,9,42);ctx.fillStyle='#182b40';ctx.font='bold 28px '+font;ctx.fillText('장소의 가치로 읽는 우리 지역 핫 플레이스',M+22,y+30);y+=80;}
-    async function nextPage(){page++;await saveCanvas(c,nameFile()+'_'+String(page).padStart(2,'0')+'.png');c=makeCanvas();ctx=c.getContext('2d');newPage();}
-    async function draw(str,size=22,bold=false,space=14,color='#182b40'){
-      ctx.font=(bold?'bold ':'')+size+'px '+font;
-      const lns=lines(ctx,str,MAX),lh=Math.ceil(size*1.62),need=lns.length*lh+space;
-      if(y+Math.min(need,lh)>H-M)await nextPage();
-      for(const line of lns){if(y+lh>H-M)await nextPage();ctx.font=(bold?'bold ':'')+size+'px '+font;ctx.fillStyle=color;ctx.fillText(line,M,y+size);y+=lh;}y+=space;
-    }
-    newPage();
-    const sections=[...document.querySelectorAll('.wizard-panel')];
-    for(const section of sections){
-      const heading=section.querySelector('h2')?.textContent?.trim()||'';
-      await draw('● '+heading,30,true,18,'#087e83');
-      const sub=section.querySelector(':scope > .sub');if(sub)await draw(sub.textContent.trim(),18,false,14,'#627387');
-      // Read the form in DOM order, retaining prompts, source labels and student answers.
-      const nodes=section.querySelectorAll('.qtitle, .field > label, .answer-sub, .refhead strong, h3, [data-answer], .check');
-      for(const node of nodes){
-        if(node.matches('.qtitle'))await draw(node.textContent.trim(),25,true,10);
-        else if(node.matches('h3'))await draw(node.textContent.trim(),25,true,8,'#087e83');
-        else if(node.matches('.refhead strong'))await draw(node.textContent.trim(),22,true,5);
-        else if(node.matches('.field > label, .answer-sub'))await draw(node.textContent.trim(),19,true,4,'#536779');
-        else if(node.matches('[data-answer]')){await draw(node.value.trim()||'(미작성)',21,false,18);}
-        else if(node.matches('.check'))await draw((node.querySelector('input')?.checked?'☑ ':'□ ')+node.textContent.trim(),19,false,10);
-      }
-      await draw('────────────────────────────',17,false,18,'#cbd8e0');
-    }
-    await saveCanvas(c,nameFile()+'_'+String(++page).padStart(2,'0')+'.png');
-    alert('PNG 이미지 '+page+'장 저장을 요청했습니다. 브라우저가 여러 파일 다운로드를 차단하면 허용해 주세요.');
-  }catch(e){alert('이미지 저장 중 오류가 발생했습니다: '+e.message);}
+function progress(){const total=fields.length,filled=fields.filter(x=>x.value.trim()).length,p=Math.round(filled/total*100);$('progressFill').style.width=p+'%';$('progressText').textContent=p+'%';document.querySelectorAll('.wizard-panel').forEach((sec,i)=>{const fs=[...sec.querySelectorAll('[data-answer]')].filter(x=>x.id!=='srcExtra');const t=document.querySelector('[data-go="'+i+'"]');if(t)t.classList.toggle('done',fs.length>0&&fs.every(x=>x.value.trim()));});}
+function save(){
+ try{localStorage.setItem(KEY,JSON.stringify(snapshot()));status.textContent='이 기기에 임시 저장됨 · '+new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});}
+ catch(e){status.textContent='임시 저장 불가 · 결과물 파일로 저장하세요.'}
+ if(IS_INAPP)syncHashSoon();
 }
-['imageBtn','bottomImage'].forEach(id=>{const b=document.getElementById(id);if(b)b.addEventListener('click',exportPng)});
-window.addEventListener('pagehide',()=>{document.getElementById('saveBtn')?.click();});
-})();
-</script>
-<script>
-(function(){'use strict';
-async function shareWorksheet(){
-  // 기존 HTML 내보내기와 같은 방식으로 현재 입력값을 저장 파일에 반영합니다.
-  document.getElementById('saveBtn')?.click();
-  const original=[...document.querySelectorAll('[data-answer]')];
-  const clone=document.documentElement.cloneNode(true);
-  const copied=[...clone.querySelectorAll('[data-answer]')];
-  original.forEach((el,i)=>{
-    const cp=copied[i]; if(!cp)return;
-    if(el.tagName==='TEXTAREA'){cp.textContent=el.value;}
-    else if(el.tagName==='SELECT'){
-      [...cp.options].forEach(o=>{if(o.value===el.value)o.setAttribute('selected','');else o.removeAttribute('selected')});
-    }else if(el.type==='checkbox'||el.type==='radio'){
-      if(el.checked)cp.setAttribute('checked','');else cp.removeAttribute('checked');
-    }else{cp.setAttribute('value',el.value);}
+function schedule(){progress();status.textContent='작성 중…';clearTimeout(timer);timer=setTimeout(save,650)}
+fields.forEach(x=>x.addEventListener('input',schedule));fields.forEach(x=>x.addEventListener('change',schedule));checks.forEach(x=>x.addEventListener('change',schedule));
+$('saveBtn').onclick=save;
+
+/* ---------- 답안을 링크에 담기 (카카오톡 → 외부 브라우저 이동용) ---------- */
+function b64url(bytes){let s='';for(let i=0;i<bytes.length;i+=0x8000)s+=String.fromCharCode.apply(null,bytes.subarray(i,i+0x8000));return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+function unb64url(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';const bin=atob(str),out=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)out[i]=bin.charCodeAt(i);return out;}
+async function pipe(bytes,Stream){const s=new Blob([bytes]).stream().pipeThrough(new Stream('deflate'));return new Uint8Array(await new Response(s).arrayBuffer());}
+async function encodeState(d){
+ const raw=new TextEncoder().encode(JSON.stringify({a:d.answers,c:d.checks}));
+ if(window.CompressionStream&&Blob.prototype.stream){try{return 'z'+b64url(await pipe(raw,CompressionStream));}catch(e){}}
+ return 'j'+b64url(raw);
+}
+async function decodeState(s){
+ const bytes=unb64url(s.slice(1));
+ const raw=s[0]==='z'?await pipe(bytes,DecompressionStream):bytes;
+ const o=JSON.parse(new TextDecoder().decode(raw));
+ return {answers:o.a||{},checks:o.c||[]};
+}
+function pageBase(){return location.href.split('#')[0];}
+async function handoffUrl(action){return pageBase()+'#restore='+(await encodeState(snapshot()))+(action?'&do='+action:'');}
+let hashTimer;
+function syncHashSoon(){clearTimeout(hashTimer);hashTimer=setTimeout(async()=>{try{if(hasAnswers(snapshot()))history.replaceState(null,'',await handoffUrl(''));}catch(e){}},300);}
+function clearHash(){try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}}
+
+/* ---------- 결과물 내용 모으기 ---------- */
+const val=id=>($(id)?.value||'').trim();
+function fmtDate(s){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||'');return m?`${m[1]}. ${+m[2]}. ${+m[3]}.`:(s||'');}
+function collect(){
+ const info={cls:val('schoolClass'),name:val('student'),region:[val('province'),val('region')].filter(Boolean).join(' '),date:fmtDate(val('date'))};
+ const sections=[];
+ document.querySelectorAll('.wizard-panel').forEach(sec=>{
+  if(sec.id==='intro')return;
+  const idx=[...document.querySelectorAll('.wizard-panel')].indexOf(sec);const s={step:document.querySelector('[data-go="'+idx+'"]')?.textContent.trim()||'',title:sec.querySelector('h2')?.textContent.trim()||'',items:[]};
+  sec.querySelectorAll('.qtitle, .field > label, .answer-sub, .refhead strong, h3, [data-answer]').forEach(n=>{
+   if(n.matches('[data-answer]'))s.items.push({k:'answer',text:n.value.trim()});
+   else if(n.matches('.qtitle')){const num=n.querySelector('.num')?.textContent.trim()||'';const rest=n.textContent.trim().slice(num.length).trim();s.items.push({k:'q',text:num?num+'. '+rest:rest});}
+   else if(n.matches('h3'))s.items.push({k:'h3',text:n.textContent.trim()});
+   else if(n.matches('.refhead strong'))s.items.push({k:'ref',text:n.textContent.trim()});
+   else s.items.push({k:'label',text:n.textContent.trim()});
   });
-  const v=id=>(document.getElementById(id)?.value||'').trim().replace(/[\/:*?"<>|\s]+/g,'_').slice(0,35);
-  const filename='핫플레이스_탐구_'+(v('student')||'학생')+'_'+(v('province')||'시도')+'_'+(v('region')||'지역')+'.html';
-  const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
-  const file=new File([blob],filename,{type:'text/html'});
-  if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
-    try{await navigator.share({files:[file],title:'한국지리 탐구 수행평가 결과물'});return;}
-    catch(err){if(err.name==='AbortError')return;}
+  sections.push(s);
+ });
+ return {info,sections};
+}
+const safe=s=>String(s||'').trim().replace(/[\\/:*?"<>|\s]+/g,'_').slice(0,35);
+function baseName(){return '핫플레이스_탐구_'+(safe(val('student'))||'학생')+'_'+(safe(val('province'))||'시도')+'_'+(safe(val('region'))||'지역');}
+
+/* ---------- 안내 창 ---------- */
+const modal=document.createElement('div');
+modal.className='ws-modal';modal.hidden=true;
+modal.innerHTML='<div class="ws-dialog" role="dialog" aria-modal="true"><div class="ws-body"></div><div class="ws-actions"></div></div>';
+document.body.appendChild(modal);
+let modalUrls=[];
+function openModal({title='',html='',actions=[],wide=false,closable=true}){
+ modalUrls.forEach(u=>URL.revokeObjectURL(u));modalUrls=[];
+ const body=modal.querySelector('.ws-body'),act=modal.querySelector('.ws-actions');
+ modal.querySelector('.ws-dialog').classList.toggle('wide',wide);
+ body.innerHTML=(title?'<h3>'+esc(title)+'</h3>':'')+html;body.scrollTop=0;
+ act.replaceChildren();
+ const list=closable?[...actions,{label:'닫기'}]:actions;
+ list.forEach(a=>{const b=document.createElement('button');b.type='button';b.className='btn'+(a.primary?' primary':'');b.textContent=a.label;b.onclick=async()=>{if(a.close!==false)closeModal();if(a.onClick)await a.onClick(b);};act.appendChild(b);});
+ act.hidden=!list.length;
+ modal.hidden=false;document.body.classList.add('ws-lock');
+ return body;
+}
+function closeModal(){modal.hidden=true;document.body.classList.remove('ws-lock');}
+function busy(msg){openModal({title:msg||'결과물을 만드는 중이에요…',html:'<div class="ws-spinner" aria-hidden="true"></div><p class="small" style="text-align:center">답안 분량에 따라 몇 초 걸릴 수 있어요.</p>',closable:false});}
+
+/* ---------- 파일 저장 · 공유 ---------- */
+function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.rel='noopener';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
+function canShareFiles(files){try{return !!(navigator.share&&navigator.canShare&&navigator.canShare({files}));}catch(e){return false;}}
+async function shareFiles(files){try{await navigator.share({files,title:TITLE});}catch(e){if(e&&e.name!=='AbortError')alert('공유하지 못했어요. 다운로드 버튼을 이용해 주세요.');}}
+const probeShare=type=>canShareFiles([new File(['x'],'test.'+type,{type:{pdf:'application/pdf',png:'image/png',html:'text/html'}[type]})]);
+const kb=n=>n>1048576?(n/1048576).toFixed(1)+'MB':Math.max(1,Math.round(n/1024))+'KB';
+function fileResult(files,title,desc){
+ const actions=[];
+ if(!IS_INAPP)actions.push({label:files.length>1?'모두 다운로드':'파일 다운로드',primary:true,close:false,onClick:async()=>{for(const f of files){download(f,f.name);await wait(500);}}});
+ if(canShareFiles(files))actions.push({label:'공유하기 (카톡 등으로 보내기)',primary:IS_INAPP,close:false,onClick:()=>shareFiles(files)});
+ openModal({title,html:'<p>'+desc+'</p><ul class="ws-files">'+files.map(f=>'<li>'+esc(f.name)+' <span class="small">('+kb(f.size)+')</span></li>').join('')+'</ul>'+(!IS_INAPP&&canShareFiles(files)?'<p class="small">휴대폰에서는 \'공유하기\'로 카카오톡 오픈 채팅방에 바로 보낼 수도 있어요.</p>':''),actions});
+}
+
+/* ---------- 카카오톡 등 인앱 브라우저 안내 ---------- */
+async function copyText(t){try{await navigator.clipboard.writeText(t);return true;}catch(e){}const ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,t.length);let ok=false;try{ok=document.execCommand('copy');}catch(e){}ta.remove();return ok;}
+async function copyHandoff(btn){const ok=await copyText(await handoffUrl(''));if(btn)btn.textContent=ok?'복사됨 ✓ 브라우저 주소창에 붙여 넣기':'복사 실패 · 화면 메뉴를 이용하세요';}
+async function openExternal(action){
+ save();
+ const url=await handoffUrl(action);
+ try{history.replaceState(null,'',url);}catch(e){}
+ if(IS_KAKAO){
+  location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url);
+  await wait(1800);
+ }
+ openModal({title:'외부 브라우저가 열리지 않았나요?',html:'<p>아래 방법 중 하나로 크롬·사파리·삼성 인터넷에서 열어 주세요. 어느 방법이든 <b>지금까지 쓴 답안이 함께 옮겨져요.</b></p><ol class="ws-steps"><li>화면 오른쪽 아래(또는 위)의 <b>⋮ / 공유 버튼 → \'다른 브라우저로 열기\'</b></li><li><b>\'주소 복사\'</b>를 누른 뒤 크롬·사파리 주소창에 붙여 넣기</li></ol><p class="small">복사한 주소에는 답안이 담겨 있으니 친구에게 보내지 마세요.</p>',actions:[{label:'주소 복사',primary:true,close:false,onClick:copyHandoff},{label:'카카오톡 안에서 이미지로 저장',onClick:makeImages}]});
+}
+function inAppGuide(action){
+ const what={pdf:'PDF',html:'HTML',print:'인쇄'}[action]||'파일';
+ const actions=[];
+ if(IS_KAKAO)actions.push({label:'외부 브라우저로 열고 '+(action==='print'?'인쇄':'저장')+'하기',primary:true,onClick:()=>openExternal(action)});
+ actions.push({label:'카카오톡 안에서 이미지로 저장',primary:!IS_KAKAO,onClick:makeImages});
+ actions.push({label:'주소 복사',close:false,onClick:copyHandoff});
+ openModal({title:(IS_KAKAO?'카카오톡':'앱')+' 안에서는 '+what+' 저장이 막혀 있어요',html:'<p>카카오톡 같은 앱 내부 브라우저는 파일 다운로드와 인쇄를 지원하지 않아요. 아래 방법 중 하나를 고르세요. <b>지금까지 작성한 답안은 그대로 옮겨져요.</b></p><ol class="ws-steps">'+(IS_KAKAO?'<li><b>외부 브라우저로 열기 (추천)</b> · 크롬·사파리·삼성 인터넷이 열리고, 답안을 불러온 뒤 바로 '+what+' 저장 창이 나와요.</li>':'<li><b>⋮ 메뉴 → \'다른 브라우저로 열기\'</b> · 답안이 함께 옮겨져요.</li>')+'<li><b>이미지로 저장</b> · 카카오톡 안에서 이미지를 길게 눌러 저장해요.</li></ol>',actions});
+}
+
+/* ---------- 결과물 HTML (모든 단계 · 답안 포함, 독립 문서) ---------- */
+function reportHtml(){
+ const {info,sections}=collect(),data=snapshot();
+ const cell=(k,v)=>`<div class="cell"><span>${esc(k)}</span><b>${esc(v||'-')}</b></div>`;
+ let body='';
+ for(const s of sections){
+  body+=`<section><div class="step">${esc(s.step)}</div><h2>${esc(s.title)}</h2>`;
+  for(const it of s.items){
+   if(it.k==='answer')body+=it.text?`<div class="ans">${esc(it.text)}</div>`:'<div class="ans empty">(미작성)</div>';
+   else if(it.k==='q')body+=`<h4>${esc(it.text)}</h4>`;
+   else if(it.k==='h3')body+=`<h3>${esc(it.text)}</h3>`;
+   else if(it.k==='ref')body+=`<h5>${esc(it.text)}</h5>`;
+   else body+=`<div class="lab">${esc(it.text)}</div>`;
   }
-  const url=URL.createObjectURL(blob),a=document.createElement('a');
-  a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),15000);
-  alert('공유 기능을 지원하지 않거나 실행할 수 없어 일반 다운로드를 시도했습니다. 카카오톡에서 저장되지 않는다면 Safari·Chrome·삼성 인터넷 등 외부 브라우저에서 다시 시도해 주세요.');
+  body+='</section>';
+ }
+ const css='*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;color:#111517;font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.75;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}main{max-width:860px;margin:0 auto;padding:30px 20px 50px}header{border-bottom:2px solid #2B3338;padding-bottom:14px}header small{display:block;font-size:12.5px;color:#8A9296;font-weight:600}header h1{font-size:28px;color:#2B3338;line-height:1.35;margin-top:4px}.info{display:grid;grid-template-columns:1fr 1fr;border:1px solid #E2E5E2;border-radius:3px;margin:18px 0 8px}.cell{padding:9px 14px;border-bottom:1px solid #EFF1EE}.cell:nth-child(odd){border-right:1px solid #EFF1EE}.cell span{display:block;font-size:12px;color:#8A9296}.cell b{font-size:15.5px;font-weight:600}section{padding:22px 0 6px;border-bottom:1px solid #EFF1EE}.step{font-size:13px;font-weight:600;color:#3D5A6C}h2{font-size:19px;font-weight:600;margin:2px 0 6px}h3{font-size:15px;color:#3D5A6C;margin:20px 0 4px}h4{font-size:15.5px;font-weight:600;margin:16px 0 6px}h5{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:#3D5A6C;padding:1px 9px;border-radius:2px;margin:12px 0 2px}.lab{font-size:13px;color:#8A9296;margin:10px 0 3px}.ans{white-space:pre-wrap;background:#F5F7F5;border:1px solid #E2E5E2;border-radius:3px;padding:10px 12px;font-size:15px}.ans.empty{color:#B6BDBF}footer{text-align:center;color:#8A9296;font-size:12px;margin-top:24px}@media(max-width:560px){.info{grid-template-columns:1fr}.cell:nth-child(odd){border-right:none}header h1{font-size:23px}}@media print{main{padding:0}h4,h5,.lab{break-after:avoid}.ans{break-inside:avoid}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}';
+ const json=JSON.stringify(data).replace(/</g,'\\u003c');
+ return `<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(TITLE)} · ${esc(info.name||'학생')}</title><style>${css}</style></head>
+<body><main><header><small>한국지리 탐구 수행평가 · 장소의 가치와 핫 플레이스</small><h1>${esc(TITLE)}</h1></header>
+<div class="info">${cell('학년 · 반',info.cls)}${cell('이름',info.name)}${cell('탐구 지역',info.region)}${cell('작성일',info.date)}</div>
+${body}<footer>저장 시각 ${esc(new Date().toLocaleString('ko-KR'))} · 이 파일은 활동지의 '저장 파일 불러오기'로 다시 불러와 이어서 작성할 수 있습니다.</footer></main>
+<script type="application/json" id="worksheet-data">${json}<\/script></body></html>`;
 }
-['shareBtn','bottomShare'].forEach(id=>document.getElementById(id)?.addEventListener('click',shareWorksheet));
+async function makeHtml(){
+ save();
+ if(IS_INAPP&&!probeShare('html'))return inAppGuide('html');
+ const file=new File([reportHtml()],baseName()+'.html',{type:'text/html'});
+ fileResult([file],'HTML 파일이 준비됐어요','모든 단계의 질문과 답안이 들어 있는 결과물 파일이에요. 어느 기기에서 열어도 내용이 그대로 보여요.');
+}
+
+/* ---------- 페이지 그리기 (PDF · PNG 공용) ---------- */
+const PW=1240,PH=1754,MX=96,TOP=104,BOT=PH-120,CW=PW-MX*2,SCALE=1.5;
+const FONT='Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif';
+const fnt=(s,b)=>(b?'bold ':'')+s+'px '+FONT;
+let mctx;
+function wrap(str,font,width){
+ mctx=mctx||document.createElement('canvas').getContext('2d');mctx.font=font;
+ const W=t=>mctx.measureText(t).width,out=[];
+ for(const para of String(str).split(/\r?\n/)){
+  if(!para.trim()){out.push('');continue;}
+  let line='';
+  for(const tok of para.split(/(\s+)/)){
+   if(!tok)continue;
+   if(W(line+tok)<=width){line+=tok;continue;}
+   if(/^\s+$/.test(tok)){out.push(line);line='';continue;}
+   if(line.trim())out.push(line.replace(/\s+$/,''));line='';
+   if(W(tok)<=width){line=tok;continue;}
+   for(const ch of tok){if(line&&W(line+ch)>width){out.push(line);line=ch;}else line+=ch;}
+  }
+  out.push(line.replace(/\s+$/,''));
+ }
+ while(out.length>1&&!out[out.length-1])out.pop();
+ return out;
+}
+function layout(){
+ const {info,sections}=collect(),pages=[];let ops,y;
+ const add=o=>ops.push(o);
+ function newPage(){ops=[];pages.push(ops);y=TOP;if(pages.length>1){add({t:'text',s:TITLE,x:MX,y:64,f:fnt(16,false),c:'#8a99a8'});add({t:'text',s:[info.cls,info.name].filter(Boolean).join(' '),x:PW-MX,y:64,f:fnt(16,false),c:'#8a99a8',a:'right'});add({t:'rect',x:MX,y:80,w:CW,h:1.5,c:'#E2E5E2'});}}
+ function para(str,size,bold,color,{before=0,after=6,keep=0}={}){
+  const f=fnt(size,bold),L=Math.round(size*1.55),lines=wrap(str,f,CW);
+  y+=before;if(y+L+keep>BOT)newPage();
+  for(const ln of lines){if(y+L>BOT)newPage();add({t:'text',s:ln,x:MX,y:y+Math.round(L*.72),f,c:color});y+=L;}
+  y+=after;
+ }
+ function answer(str){
+  const size=21,L=Math.round(size*1.7),pad=18,f=fnt(size,false),empty=!str,lines=wrap(empty?'(미작성)':str,f,CW-pad*2);
+  y+=4;if(y+pad*2+L>BOT)newPage();
+  let box={t:'box',x:MX,y,w:CW,h:0};add(box);y+=pad;
+  for(const ln of lines){
+   if(y+L>BOT-pad/2){box.h=y-box.y+pad/2;newPage();box={t:'box',x:MX,y,w:CW,h:0};add(box);y+=pad/2;}
+   add({t:'text',s:ln,x:MX+pad,y:y+Math.round(L*.68),f,c:empty?'#9aa7b3':'#111517'});y+=L;
+  }
+  y+=pad;box.h=y-box.y;y+=18;
+ }
+ newPage();
+ add({t:'rect',x:MX,y:250,w:CW,h:3,c:'#2B3338'});
+ add({t:'text',s:'한국지리 탐구 수행평가 · 장소의 가치와 핫 플레이스',x:MX,y:96,f:fnt(17,true),c:'#8A9296'});
+ add({t:'text',s:'장소의 가치로 읽는',x:MX,y:160,f:fnt(42,true),c:'#2B3338'});
+ add({t:'text',s:'우리 지역 핫 플레이스',x:MX,y:218,f:fnt(42,true),c:'#2B3338'});
+ y=300;
+ const cw=CW/2,ch=94;
+ [['학년 · 반',info.cls],['이름',info.name],['탐구 지역',info.region],['작성일',info.date]].forEach(([k,v],i)=>{
+  const cx=MX+(i%2)*cw,cy=y+Math.floor(i/2)*ch;
+  add({t:'cell',x:cx,y:cy,w:cw,h:ch});
+  add({t:'text',s:k,x:cx+22,y:cy+34,f:fnt(16,false),c:'#8A9296'});
+  add({t:'text',s:wrap(v||'-',fnt(23,true),cw-44)[0],x:cx+22,y:cy+72,f:fnt(23,true),c:'#111517'});
+ });
+ y+=ch*2+44;
+ for(const s of sections){
+  para(s.step,17,true,'#3D5A6C',{after:0,keep:170});
+  para(s.title,30,true,'#111517',{after:12,keep:110});
+  for(const it of s.items){
+   if(it.k==='answer')answer(it.text);
+   else if(it.k==='q')para(it.text,23,true,'#111517',{before:12,after:6,keep:90});
+   else if(it.k==='h3')para(it.text,24,true,'#3D5A6C',{before:20,after:4,keep:140});
+   else if(it.k==='ref')para(it.text,19,true,'#111517',{before:8,after:0,keep:120});
+   else para(it.text,18,true,'#525C60',{before:2,after:2,keep:80});
+  }
+  y+=30;
+ }
+ return {pages,footer:[info.name||'학생',TITLE].join(' · ')};
+}
+function rr(x,a,b,w,h,r){x.beginPath();if(!r){x.rect(a,b,w,h);return;}x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath();}
+function renderPage(L,i){
+ const c=document.createElement('canvas');c.width=Math.round(PW*SCALE);c.height=Math.round(PH*SCALE);
+ const x=c.getContext('2d');x.setTransform(SCALE,0,0,SCALE,0,0);x.fillStyle='#fff';x.fillRect(0,0,PW,PH);
+ for(const o of L.pages[i]){
+  if(o.t==='rect'){x.fillStyle=o.c;x.fillRect(o.x,o.y,o.w,o.h);}
+  else if(o.t==='box'||o.t==='cell'){rr(x,o.x,o.y,o.w,o.h,o.t==='box'?5:0);x.fillStyle=o.t==='box'?'#F5F7F5':'#ffffff';x.fill();x.strokeStyle='#E2E5E2';x.lineWidth=1.5;x.stroke();}
+  else{x.font=o.f;x.fillStyle=o.c;x.textAlign=o.a||'left';x.fillText(o.s,o.x,o.y);}
+ }
+ x.textAlign='center';x.font=fnt(15,false);x.fillStyle='#8a99a8';x.fillText(L.footer+'  ·  '+(i+1)+' / '+L.pages.length,PW/2,PH-56);
+ return c;
+}
+function canvasBlob(c,type,q){return new Promise((res,rej)=>{if(c.toBlob)c.toBlob(b=>b?res(b):rej(Error('이미지를 만들지 못했습니다.')),type,q);else{fetch(c.toDataURL(type,q)).then(r=>r.blob()).then(res,rej);}});}
+const blobBytes=b=>b.arrayBuffer?b.arrayBuffer().then(a=>new Uint8Array(a)):new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(new Uint8Array(fr.result));fr.readAsArrayBuffer(b);});
+const blobDataUrl=b=>new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(fr.result);fr.readAsDataURL(b);});
+async function prepareLayout(){try{if(document.fonts&&document.fonts.ready)await Promise.race([document.fonts.ready,wait(1500)]);}catch(e){}return layout();}
+
+/* ---------- PDF 파일 직접 만들기 (외부 라이브러리 없음) ---------- */
+function pdfText(s){let h='FEFF';for(const ch of s){const cp=ch.codePointAt(0);if(cp>0xFFFF){const v=cp-0x10000;h+=(0xD800+(v>>10)).toString(16).padStart(4,'0')+(0xDC00+(v&1023)).toString(16).padStart(4,'0');}else h+=cp.toString(16).padStart(4,'0');}return '<'+h.toUpperCase()+'>';}
+function buildPdf(imgs,title){
+ const enc=new TextEncoder(),parts=[],off=[];let len=0;
+ const push=v=>{const b=typeof v==='string'?enc.encode(v):v;parts.push(b);len+=b.length;};
+ const obj=(n,s)=>{off[n]=len;push(n+' 0 obj\n'+s);};
+ const n=imgs.length,infoNo=3+n*3;
+ push('%PDF-1.4\n');push(new Uint8Array([37,226,227,207,211,10]));
+ obj(1,'<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');
+ obj(2,'<< /Type /Pages /Kids ['+imgs.map((_,i)=>(3+i*3)+' 0 R').join(' ')+'] /Count '+n+' >>\nendobj\n');
+ imgs.forEach((im,i)=>{
+  const p=3+i*3,cs=`q\n595.28 0 0 841.89 0 0 cm\n/Im${i} Do\nQ\n`;
+  obj(p,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im${i} ${p+2} 0 R >> >> /Contents ${p+1} 0 R >>\nendobj\n`);
+  obj(p+1,`<< /Length ${cs.length} >>\nstream\n${cs}endstream\nendobj\n`);
+  obj(p+2,`<< /Type /XObject /Subtype /Image /Width ${im.w} /Height ${im.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${im.bytes.length} >>\nstream\n`);push(im.bytes);push('\nendstream\nendobj\n');
+ });
+ obj(infoNo,'<< /Title '+pdfText(title)+' /Producer (Hotplace Worksheet) >>\nendobj\n');
+ const xref=len;let t='xref\n0 '+(infoNo+1)+'\n0000000000 65535 f \n';
+ for(let k=1;k<=infoNo;k++)t+=String(off[k]).padStart(10,'0')+' 00000 n \n';
+ push(t);push(`trailer\n<< /Size ${infoNo+1} /Root 1 0 R /Info ${infoNo} 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
+ return new Blob(parts,{type:'application/pdf'});
+}
+async function makePdf(){
+ save();
+ if(IS_INAPP&&!probeShare('pdf'))return inAppGuide('pdf');
+ busy('PDF 파일을 만드는 중이에요…');
+ try{
+  await wait(30);
+  const L=await prepareLayout(),imgs=[];
+  for(let i=0;i<L.pages.length;i++){const c=renderPage(L,i);const b=await canvasBlob(c,'image/jpeg',.9);imgs.push({bytes:await blobBytes(b),w:c.width,h:c.height});c.width=c.height=0;}
+  const file=new File([buildPdf(imgs,TITLE+' · '+(val('student')||'학생'))],baseName()+'.pdf',{type:'application/pdf'});
+  fileResult([file],'PDF 파일이 준비됐어요','모든 단계의 질문과 답안이 담긴 PDF예요 (총 '+imgs.length+'쪽). 저장한 뒤 파일이 잘 열리는지 확인해 주세요.');
+ }catch(e){closeModal();alert('PDF를 만들지 못했습니다: '+e.message+'\n이미지(PNG) 저장을 이용해 주세요.');}
+}
+
+/* ---------- PNG 이미지 ---------- */
+async function makeImages(){
+ save();
+ busy('이미지를 만드는 중이에요…');
+ try{
+  await wait(30);
+  const L=await prepareLayout(),files=[],srcs=[],name=baseName();
+  for(let i=0;i<L.pages.length;i++){
+   const c=renderPage(L,i),b=await canvasBlob(c,'image/png');c.width=c.height=0;
+   files.push(new File([b],name+'_'+String(i+1).padStart(2,'0')+'.png',{type:'image/png'}));
+   srcs.push(IS_INAPP?await blobDataUrl(b):URL.createObjectURL(b));
+  }
+  const share=canShareFiles(files),actions=[];
+  if(!IS_INAPP)actions.push({label:files.length>1?'모두 다운로드 ('+files.length+'장)':'이미지 다운로드',primary:true,close:false,onClick:async()=>{for(const f of files){download(f,f.name);await wait(600);}}});
+  if(share)actions.push({label:'공유하기 (카톡 등으로 보내기)',primary:IS_INAPP,close:false,onClick:()=>shareFiles(files)});
+  if(IS_KAKAO)actions.push({label:'외부 브라우저에서 PDF 저장',onClick:()=>openExternal('pdf')});
+  const hint=IS_INAPP
+   ?'<p class="ws-hint"><b>아래 이미지를 한 장씩 길게 눌러</b> \'이미지 저장\'(아이폰은 \'사진 앱에 저장\')을 선택하세요. 메뉴가 나오지 않으면 이미지가 보이는 화면을 캡처해도 됩니다.</p>'
+   :'<p class="ws-hint">총 '+files.length+'장이에요. 여러 장을 한 번에 받을 때 브라우저가 \'여러 파일 다운로드\'를 물으면 허용해 주세요.'+(IS_IOS?' 이미지를 길게 눌러 \'사진 앱에 저장\'할 수도 있어요.':'')+'</p>';
+  const body=openModal({title:'이미지가 준비됐어요',wide:true,html:hint+'<div class="ws-pages">'+srcs.map((s,i)=>'<figure><img alt="결과물 '+(i+1)+'쪽" src="'+s+'"><figcaption>'+(i+1)+' / '+srcs.length+'쪽</figcaption></figure>').join('')+'</div>',actions});
+  if(!IS_INAPP)modalUrls=srcs.slice();
+  body.querySelectorAll('img').forEach(img=>img.addEventListener('contextmenu',e=>e.stopPropagation()));
+ }catch(e){closeModal();alert('이미지를 만들지 못했습니다: '+e.message+'\n화면을 직접 캡처해 제출해 주세요.');}
+}
+
+/* ---------- 인쇄 (PC용) ---------- */
+function printPage(){save();if(IS_INAPP)return inAppGuide('print');window.print();}
+const answerEls=fields;let printed=[];
+window.addEventListener('beforeprint',()=>{printed.forEach(x=>x.remove());printed=[];answerEls.forEach(el=>{const div=document.createElement('div');div.className='print-answer print-only';div.textContent=el.value||'(미작성)';el.classList.add('print-replaced');el.insertAdjacentElement('afterend',div);printed.push(div);});});
+window.addEventListener('afterprint',()=>{printed.forEach(x=>x.remove());printed=[];answerEls.forEach(x=>x.classList.remove('print-replaced'));});
+
+/* ---------- 버튼 연결 ---------- */
+[['exportBtn',makeHtml],['bottomExport',makeHtml],['pdfBtn',makePdf],['bottomPdf',makePdf],['imageBtn',makeImages],['bottomImage',makeImages],['bottomPrint',printPage]].forEach(([id,fn])=>{const b=$(id);if(b)b.addEventListener('click',fn);});
+
+/* ---------- 저장 파일 불러오기 ---------- */
+const fileInput=$('fileInput');
+$('loadBtn').onclick=()=>fileInput.click();
+fileInput.onchange=async()=>{
+ const f=fileInput.files[0];if(!f)return;
+ try{
+  const s=await f.text();let data;
+  if(f.name.toLowerCase().endsWith('.json'))data=JSON.parse(s);
+  else{
+   const doc=new DOMParser().parseFromString(s,'text/html'),emb=doc.getElementById('worksheet-data');
+   if(emb)data=JSON.parse(emb.textContent);
+   else if(doc.querySelector('[data-answer]')){const a={};doc.querySelectorAll('[data-answer]').forEach(el=>a[el.id]=el.tagName==='TEXTAREA'?el.value:el.tagName==='SELECT'?(el.querySelector('option[selected]')?.value||el.value):el.getAttribute('value')||'');data={answers:a,checks:[...doc.querySelectorAll('[data-check]')].map(el=>el.checked)};}
+   else throw Error('이 활동지에서 저장한 HTML 파일이 아닙니다.');
+  }
+  if(!confirm('현재 작성 중인 내용을 불러온 파일의 답안으로 바꿀까요?'))return;
+  apply(data);save();status.textContent='저장 파일을 불러왔습니다.';
+ }catch(e){alert('파일을 불러오지 못했습니다: '+e.message)}finally{fileInput.value=''}
+};
+$('resetBtn').onclick=()=>{if(!confirm('모든 답안과 임시 저장 내용을 초기화할까요? 이 작업은 되돌릴 수 없습니다.'))return;fields.forEach(x=>x.value='');setRegionDistricts('');checks.forEach(x=>x.checked=false);try{localStorage.removeItem(KEY)}catch(e){}clearHash();progress();status.textContent='초기화 완료'};
+window.addEventListener('pagehide',save);
+
+/* ---------- 단계 이동 ---------- */
+const pages=[...document.querySelectorAll('.wizard-panel')],tabs=[...document.querySelectorAll('[data-go]')];let currentPage=0;
+function showPage(index){currentPage=Math.max(0,Math.min(pages.length-1,index));pages.forEach((p,i)=>p.hidden=i!==currentPage);tabs.forEach((b,i)=>{b.classList.toggle('active',i===currentPage);b.setAttribute('aria-current',i===currentPage?'step':'false')});$('prevStep').disabled=currentPage===0;const next=$('nextStep');const last=currentPage===pages.length-1;next.textContent=last?'결과물 저장':'다음 →';$('stepCounter').textContent=(currentPage+1)+' / '+pages.length;window.scrollTo({top:0,behavior:'auto'});const active=tabs[currentPage];if(active&&window.innerWidth<=640)active.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});}
+tabs.forEach(b=>b.addEventListener('click',()=>showPage(Number(b.dataset.go))));
+$('prevStep').addEventListener('click',()=>showPage(currentPage-1));
+$('nextStep').addEventListener('click',()=>{if(currentPage===pages.length-1)saveMenu();else showPage(currentPage+1);});
+function saveMenu(){openModal({title:'결과물 저장',html:'<p>제출할 형식을 고르세요. 모든 단계의 답안이 함께 저장돼요.</p>',actions:[{label:'PDF 파일',primary:true,onClick:makePdf},{label:'이미지(PNG)',onClick:makeImages},{label:'HTML 파일',onClick:makeHtml}]});}
+
+/* ---------- 시작: 이 기기 저장분 복원 → 링크에 담긴 답안 복원 ---------- */
+try{const d=localStorage.getItem(KEY);if(d){apply(JSON.parse(d));status.textContent='이 기기에 저장된 답안을 복원했습니다.'}}catch(e){status.textContent='저장 데이터 복원 실패'}
+progress();showPage(0);
+if(IS_INAPP){
+ const bar=document.createElement('div');bar.className='inapp-banner no-print';
+ bar.innerHTML='<div><span><b>'+(IS_KAKAO?'카카오톡':'앱')+' 안에서 열었어요.</b> 답안 작성은 그대로 하면 되고, 저장할 때 안내가 나와요.</span>'+(IS_KAKAO?'<button class="btn" type="button">외부 브라우저로 열기</button>':'')+'</div>';
+ document.querySelector('header.top').insertAdjacentElement('afterend',bar);
+ bar.querySelector('button')?.addEventListener('click',()=>openExternal(''));
+}
+(async function restoreFromLink(){
+ const m=/[#&]restore=([^&]+)/.exec(location.hash);if(!m)return;
+ const act=(/[#&]do=(\w+)/.exec(location.hash)||[])[1]||'';
+ if(IS_INAPP)return; // 앱 안에서는 이 기기 저장분이 최신입니다.
+ let d;try{d=await decodeState(decodeURIComponent(m[1]));}catch(e){clearHash();status.textContent='링크에 담긴 답안을 읽지 못했습니다.';return;}
+ clearHash();
+ const same=fields.every(x=>String(d.answers[x.id]??'')===x.value);
+ if(!same){
+  if(hasAnswers(snapshot())&&!confirm('카카오톡에서 작성한 답안을 가져왔어요.\n이 브라우저에 저장돼 있던 이전 답안 대신 불러올까요?'))return;
+  apply(d);save();status.textContent='카카오톡에서 작성한 답안을 불러왔습니다.';
+ }
+ const go={pdf:makePdf,html:makeHtml,png:makeImages,print:()=>window.print()};
+ const actions=[{label:'PDF 파일 저장',primary:act!=='html'&&act!=='print',onClick:makePdf},{label:'이미지(PNG) 저장',onClick:makeImages},{label:'HTML 파일 저장',primary:act==='html',onClick:makeHtml}];
+ if(act==='print')actions.unshift({label:'인쇄하기',primary:true,onClick:go.print});
+ openModal({title:'답안을 가져왔어요 ✓',html:'<p>카카오톡에서 작성한 답안이 이 브라우저로 옮겨졌어요. 원하는 형식으로 저장하세요. 계속 작성하려면 \'닫기\'를 누르세요.</p>',actions});
 })();
-</script></body></html>
+})();
+</script>
+</body></html>
